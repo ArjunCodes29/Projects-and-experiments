@@ -1,3 +1,22 @@
+# This piece of code was made to investigate the propagation of uncertainty during the standard method of calculating uncertainty in physics
+# Our teacher simply told us "When multiplying to values with their own uncertainties, add the percentage uncertainties to find the resulting uncertainty"
+# A quick example then, while multiplying (1,3) * (1,3) we get (1,9) but using the physics method we get (0,8)
+# I was not sure why this difference existed so the following python codes sets up the neccesary interval arithmetic and then looks into the 
+# difference in the two methods of multiplying uncertainty
+# "            product_percent = mul_percent(interval_a,interval_b)
+#           product_normal = mul_interval_fast(interval_a,interval_b) " these are the two functions in question
+
+# Most of this code is copied from someone else- my work starts at 439
+
+# The fruit of analysis was that - the physical method of finding uncertainty is a very good approximation for real uncertainty
+# it does however break down with small numbers and high amounts of uncertainty
+
+# this article by MIT explains this - http://web.mit.edu/fluids-modules/www/exper_techniques/2.Propagation_of_Uncertaint.pdf
+
+
+
+
+
 def str_interval(x):
     """Return a string representation of interval x.
     
